@@ -11,9 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Word Pair Generator Demo',
-      theme: ThemeData(primarySwatch: Colors.purple),
-      home: BaseScaffold()
+      title: 'Gun Fight Demo',
+      theme: ThemeData(primarySwatch: Colors.blueGrey),
+      home: const BaseScaffold()
     );
   }
 }
