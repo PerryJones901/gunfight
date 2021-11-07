@@ -12,17 +12,17 @@ class ChallengeViewState extends State<ChallengeView> {
   List<Widget> _getItems() {
     return <Widget>[
       const DefaultTile(
+        padding: EdgeInsets.fromLTRB(10, 50, 10, 50),
         text: 'CHALLENGE INFO',
-        style: TextStyle(fontSize: 60),
       ),
       const DefaultTile(
         text: 'PLAYERS',
-        isAllCornersRounded: true
+        isAllCornersRounded: true,
       ),
       const DefaultTile(
         text: 'CHALLENGE',
         color: Colors.black,
-        style: TextStyle(color: Colors.white, fontSize: 40),
+        style: TextStyle(color: Colors.white, fontSize: 30),
       ),
       IconButton(
         icon: const Icon(Icons.ios_share),
