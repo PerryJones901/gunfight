@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class DiscoverPageBanner extends StatelessWidget {
-  const DiscoverPageBanner({Key? key}) : super(key: key);
+class DiscoverNewChallengeButton extends StatelessWidget {
+  const DiscoverNewChallengeButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+      padding: const EdgeInsets.fromLTRB(0, 40, 0, 40),
       decoration: const BoxDecoration(
-        color: Colors.green,
+        color: Colors.blue,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(10),
           bottomRight: Radius.circular(10),
@@ -17,7 +17,7 @@ class DiscoverPageBanner extends StatelessWidget {
       width: double.infinity,
       child: const Center(
         child: Text(
-          'Banner',
+          'New Challenge Button',
           style: TextStyle(fontSize: 30)
         )
       )
