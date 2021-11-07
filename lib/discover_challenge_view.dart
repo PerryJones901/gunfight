@@ -2,9 +2,25 @@ import 'package:flutter/material.dart';
 
 import 'challenge_view.dart';
 
-class DiscoverChallengeView extends StatelessWidget {
-  const DiscoverChallengeView({Key? key}) : super(key: key);
+class DiscoverChallengeView extends StatefulWidget {
+  final String lobbyName;
+  final int wager;
+  final String gameName;
+  final int slotsAvaliable;
 
+  const DiscoverChallengeView({
+    Key? key,
+    this.lobbyName = 'LOBBY NAME',
+    this.wager = 20,
+    this.gameName = 'GAME',
+    this.slotsAvaliable = 2,
+  }) : super(key: key);
+
+  @override
+  _DiscoverChallengeViewState createState() => _DiscoverChallengeViewState();
+}
+
+class _DiscoverChallengeViewState extends State<DiscoverChallengeView> {
   Widget _getText(String text, {double size = 20, bool isBold = false}) {
     return Text(
       text,
@@ -46,16 +62,16 @@ class DiscoverChallengeView extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  _getText('LOBBY NAME'),
-                  _getText('£20', size: 40, isBold: true),
+                  _getText(widget.lobbyName),
+                  _getText('£${widget.wager}', size: 40, isBold: true),
                 ],
               ),
               Container(height:40),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  _getText('GAME'),
-                  _getText('Open slots'),
+                  _getText(widget.gameName),
+                  _getText('${widget.slotsAvaliable} slots'),
                 ],
               ),
             ],

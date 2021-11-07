@@ -17,9 +17,23 @@ class DiscoverPageState extends State<DiscoverPage> {
     return <Widget>[
       const DiscoverPageBanner(),
       const DiscoverNewChallengeButton(),
-      const DiscoverChallengeView(),
-      const DiscoverChallengeView(),
-      const DiscoverChallengeView()
+      const DiscoverChallengeView(
+        lobbyName: 'SNIPERS ONLY 1V1',
+        gameName: 'CoD: Modern Warfare (2019)',
+        slotsAvaliable: 1,
+      ),
+      const DiscoverChallengeView(
+        lobbyName: 'RUST 1V1',
+        gameName: 'CoD: Modern Warfare 2',
+        wager: 10,
+        slotsAvaliable: 1,
+      ),
+      const DiscoverChallengeView(
+        lobbyName: 'Gunfight 2v2',
+        wager: 5,
+        gameName: 'CoD: Cold War',
+        slotsAvaliable: 2,
+      )
     ];
   }
 
