@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gunfight/default_tile.dart';
 
 import 'discover_banner.dart';
 import 'discover_challenge_view.dart';
@@ -12,31 +13,26 @@ class DiscoverPage extends StatefulWidget {
 }
 
 class DiscoverPageState extends State<DiscoverPage> {
+  List<Widget> _getItems() {
+    return <Widget>[
+      const DiscoverPageBanner(),
+      const DiscoverNewChallengeButton(),
+      const DiscoverChallengeView(),
+      const DiscoverChallengeView(),
+      const DiscoverChallengeView()
+    ];
+  }
+
   @override
-  Widget build(BuildContext context){
-    return ListView(
-      children: const [
-        Padding(
-          padding: EdgeInsets.all(10),
-          child: DiscoverPageBanner()
-        ),
-        Padding(
-          padding: EdgeInsets.all(10),
-          child: DiscoverNewChallengeButton()
-        ),
-        Padding(
-          padding: EdgeInsets.all(10),
-          child: DiscoverChallengeView()
-        ),
-        Padding(
-          padding: EdgeInsets.all(10),
-          child: DiscoverChallengeView()
-        ),
-        Padding(
-          padding: EdgeInsets.all(10),
-          child: DiscoverChallengeView()
-        ),
-      ]
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemCount: _getItems().length,
+      itemBuilder: (BuildContext context, int index) {
+        return Padding(
+          padding: const EdgeInsets.all(10),
+          child: _getItems()[index]
+        );
+      }
     );
   }
 }

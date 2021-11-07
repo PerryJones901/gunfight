@@ -6,6 +6,7 @@ class DefaultTile extends StatefulWidget {
   final String text;
   final TextStyle style;
   final bool isAllCornersRounded;
+  final TextAlign textAlign;
 
   const DefaultTile({
     Key? key,
@@ -14,6 +15,7 @@ class DefaultTile extends StatefulWidget {
     this.text = 'Test text',
     this.style = const TextStyle(fontSize: 30),
     this.isAllCornersRounded = false,
+    this.textAlign = TextAlign.center
   }) : super(key: key);
 
   @override
@@ -28,17 +30,17 @@ class _DefaultTileState extends State<DefaultTile> {
       decoration: BoxDecoration(
         color: widget.color,
         borderRadius: widget.isAllCornersRounded
-          ? const BorderRadius.only(
+          ? const BorderRadius.all(Radius.circular(10))
+          : const BorderRadius.only(
             topLeft: Radius.circular(10),
-            bottomRight: Radius.circular(10))
-          : const BorderRadius.all(Radius.circular(10),
-        ),
+            bottomRight: Radius.circular(10)),
       ),
       width: double.infinity,
       child: Center(
         child: Text(
           widget.text,
-          style: widget.style
+          style: widget.style,
+          textAlign: widget.textAlign,
         )
       )
     );
