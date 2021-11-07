@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gunfight/discover_page.dart';
 
 class BaseScaffold extends StatefulWidget {
   const BaseScaffold({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class BaseScaffoldState extends State<BaseScaffold> {
   int _currentIndex = 0;
 
   final tabs = [
-    Center(child: Text('Discover Page')),
+    DiscoverPage(),
     Center(child: Text('Add a Challenge Page')),
     Center(child: Text('Profile Page')),
   ];
