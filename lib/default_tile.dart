@@ -11,7 +11,7 @@ class DefaultTile extends StatefulWidget {
   const DefaultTile({
     Key? key,
     this.padding = const EdgeInsets.fromLTRB(0, 20, 0, 20),
-    this.color = Colors.green,
+    this.color = Colors.grey,
     this.text = 'Test text',
     this.style = const TextStyle(fontSize: 30),
     this.isAllCornersRounded = false,

@@ -1,33 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:gunfight/default_tile.dart';
 
-class ChallengeView extends StatefulWidget {
-  const ChallengeView({Key? key}) : super(key: key);
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({Key? key}) : super(key: key);
 
   @override
-  ChallengeViewState createState() => ChallengeViewState();
+  ProfilePageState createState() => ProfilePageState();
 }
 
-class ChallengeViewState extends State<ChallengeView> {
+class ProfilePageState extends State<ProfilePage> {
   List<Widget> _getItems() {
     return <Widget>[
-      const DefaultTile(
-        text: 'CHALLENGE INFO',
-        style: TextStyle(fontSize: 60),
+      const CircleAvatar(
+        backgroundColor: Colors.grey,
+        child: Text('PIC', style: TextStyle(fontSize: 30)), 
+        radius: 60,
       ),
       const DefaultTile(
-        text: 'PLAYERS',
-        isAllCornersRounded: true
+        text: 'BIO',
+      ),
+      const DefaultTile(
+        text: 'MATCHES, WINS',
       ),
       const DefaultTile(
         text: 'CHALLENGE',
-        color: Colors.black,
-        style: TextStyle(color: Colors.white, fontSize: 40),
       ),
-      IconButton(
-        icon: const Icon(Icons.ios_share),
-        onPressed: () {},
-        iconSize: 40,
+      const DefaultTile(
+        text: 'PAST GAMES',
+        padding: const EdgeInsets.fromLTRB(0, 50, 0, 50),
       ),
     ];
   }
