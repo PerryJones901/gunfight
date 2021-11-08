@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gunfight/default_tile.dart';
-
-import 'challenge_view.dart';
+import 'package:gunfight/registration_page.dart';
 
 class DebugPage extends StatefulWidget {
   const DebugPage({Key? key}) : super(key: key);
@@ -12,14 +11,14 @@ class DebugPage extends StatefulWidget {
 
 class DebugPageState extends State<DebugPage> {
   final List<Widget> _debugPages = <Widget>[
-    const ChallengeView()
+    const RegistrationPage()
   ];
 
   void _pushPage(BuildContext context) {
     Navigator.of(context).push(
       MaterialPageRoute(builder: (BuildContext context) {
         return Scaffold(
-          appBar: AppBar(title: Text('Challenge View')),
+          appBar: AppBar(title: Text('Registration')),
           body: _debugPages[0],
         );
       }),
